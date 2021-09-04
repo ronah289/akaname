@@ -12,9 +12,31 @@ function findName(){
     var gender = document.getElementsByName("gender");
     var genderValue = gender[0].checked? "female":"male";
     var genderHold = genderValue;
+    const male = ['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame'];
+    const female = ['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
     // error handler
     function error(){
         return;
+    }
+    function nameFinder(arrayName){
+        if(arrayName.length != 4){
+            error();
+        }
+        else if(arrayName[3] == 'male'){
+            var Day = new Date(arrayName[0],(arrayName[1]-1),arrayName[2]);
+            var index = Day.getDay();
+            var nameAka = male[index];
+            see.innerHTML = nameAka;
+        }
+        else if(arrayName[3] == 'female'){
+            var Day = new Date(arrayName[0],(arrayName[1]-1),arrayName[2]);
+            var index = Day.getDay();
+            var nameAka = female[index];
+            see.innerHTML = nameAka;
+        }
+        else{
+            error();
+        }
     }
     if(isNaN(year)|| isNaN(month)||isNaN(date)){
         error();
@@ -30,15 +52,20 @@ function findName(){
                 date = (date >=1 && date <= Dates[month-1])?date:error();
                 approvedDay = new Array(year,month,date,genderHold);
                 //alert(approvedDay);
-                see.innerHTML = approvedDay;
+                //see.innerHTML = approvedDay;
+                //return approvedDay;
+                nameFinder(approvedDay);
             }
             else{
                 Dates = [...Dates];
                 date = (date >=1 && date <= Dates[month-1])?date:error();
                 approvedDay = new Array(year,month,date,genderHold);
                 //alert(approvedDay);
-                see.innerHTML = approvedDay;
+                //see.innerHTML = approvedDay;
+                //return approvedDay;
+                nameFinder(approvedDay);
             }
+
         }
         else{
             //see.innerHTML = "try again";
