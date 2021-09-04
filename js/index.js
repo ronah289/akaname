@@ -23,15 +23,16 @@ function findName(){
     else{
         year = (year.toString().length == 4)?year:error();
         month = (month >= 1 && month <=12)?month:error();
-        date = (date >=1 && date <= Dates[month-1])?date:error();
         if(year%4 ==0 || year % 400 == 0){
             Dates = [...Dates][1]=29;
-            approvedDay = new Array(year,month,date,genderHold);
+            date = (date >=1 && date <= Dates[month-1])?date:error();
+            approvedDay = new Array(year,month,date,genderHold,);
             //alert(approvedDay);
             see.innerHTML = approvedDay;
         }
         else{
             Dates = [...Dates];
+            date = (date >=1 && date <= Dates[month-1])?date:error();
             approvedDay = new Array(year,month,date,genderHold);
             //alert(approvedDay);
             see.innerHTML = approvedDay;
