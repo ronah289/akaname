@@ -1,4 +1,6 @@
 function findName(){
+    //outputs
+    var see = document.getElementById("output");
     // hold day
     var approvedDay;
     // dates
@@ -25,12 +27,14 @@ function findName(){
         if(year%4 ==0 || year % 400 == 0){
             Dates = [...Dates][1]=29;
             approvedDay = new Array(year,month,date,genderHold);
-            alert(approvedDay);
+            //alert(approvedDay);
+            see.innerHTML = approvedDay;
         }
         else{
             Dates = [...Dates];
             approvedDay = new Array(year,month,date,genderHold);
-            alert(approvedDay);
+            //alert(approvedDay);
+            see.innerHTML = approvedDay;
         }
     }
 }
