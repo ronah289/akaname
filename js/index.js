@@ -3,6 +3,7 @@ function findName(){
     var date = document.getElementById("dateOfBirth").value;
     var month = document.getElementById("birthMonth").value;
     var year = document.getElementById("birthYear").value;
-    //var gender = document.getElementsName("gender");
-    alert(date+"......"+month+"......"+year);
+    var gender = document.getElementsByName("gender");
+    var g = gender[0].checked? "female":"male";
+    console.log(g);
 }
