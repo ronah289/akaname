@@ -14,9 +14,7 @@ function findName(){
     var genderHold = genderValue;
     // error handler
     function error(){
-        alert("check inputs!!!!");
-        return 0;
-
+        return;
     }
     if(isNaN(year)|| isNaN(month)||isNaN(date)){
         error();
@@ -24,21 +22,27 @@ function findName(){
     else{
         year = (year.toString().length == 4)?year:error();
         month = (month >= 1 && month <=12)?month:error();
-        if(year%4 ==0 || year % 400 == 0){
-            // to do --- update new array
-            Dates = [...Dates];
-            Dates[1] = 29;
-            date = (date >=1 && date <= Dates[month-1])?date:error();
-            approvedDay = new Array(year,month,date,genderHold);
-            //alert(approvedDay);
-            see.innerHTML = approvedDay;
+        if((year != error()) && (month != error())){
+            if(year%4 ==0 || year % 400 == 0){
+                // to do --- update new array
+                Dates = [...Dates];
+                Dates[1] = 29;
+                date = (date >=1 && date <= Dates[month-1])?date:error();
+                approvedDay = new Array(year,month,date,genderHold);
+                //alert(approvedDay);
+                see.innerHTML = approvedDay;
+            }
+            else{
+                Dates = [...Dates];
+                date = (date >=1 && date <= Dates[month-1])?date:error();
+                approvedDay = new Array(year,month,date,genderHold);
+                //alert(approvedDay);
+                see.innerHTML = approvedDay;
+            }
         }
         else{
-            Dates = [...Dates];
-            date = (date >=1 && date <= Dates[month-1])?date:error();
-            approvedDay = new Array(year,month,date,genderHold);
-            //alert(approvedDay);
-            see.innerHTML = approvedDay;
+            //see.innerHTML = "try again";
+            alert("try again");
         }
     }
 }
