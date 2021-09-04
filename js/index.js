@@ -15,6 +15,7 @@ function findName(){
     // error handler
     function error(){
         alert("check inputs!!!!");
+        return 0;
 
     }
     if(isNaN(year)|| isNaN(month)||isNaN(date)){
@@ -24,9 +25,11 @@ function findName(){
         year = (year.toString().length == 4)?year:error();
         month = (month >= 1 && month <=12)?month:error();
         if(year%4 ==0 || year % 400 == 0){
-            Dates = [...Dates][1]=29;
+            // to do --- update new array
+            Dates = [...Dates];
+            Dates[1] = 29;
             date = (date >=1 && date <= Dates[month-1])?date:error();
-            approvedDay = new Array(year,month,date,genderHold,);
+            approvedDay = new Array(year,month,date,genderHold);
             //alert(approvedDay);
             see.innerHTML = approvedDay;
         }
