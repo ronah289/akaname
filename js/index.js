@@ -18,6 +18,9 @@ function findName(){
     function error(){
         return;
     }
+    function errordate(){
+        alert("check date and resubmit to receive your name.");
+    }
     function nameFinder(arrayName){
         if(arrayName.length != 4){
             error();
@@ -49,7 +52,7 @@ function findName(){
                 // to do --- update new array
                 Dates = [...Dates];
                 Dates[1] = 29;
-                date = (date >=1 && date <= Dates[month-1])?date:error();
+                date = (date >=1 && date <= Dates[month-1])?date:errorDate();
                 approvedDay = new Array(year,month,date,genderHold);
                 //alert(approvedDay);
                 //see.innerHTML = approvedDay;
@@ -58,7 +61,7 @@ function findName(){
             }
             else{
                 Dates = [...Dates];
-                date = (date >=1 && date <= Dates[month-1])?date:error();
+                date = (date >=1 && date <= Dates[month-1])?date:errorDate();
                 approvedDay = new Array(year,month,date,genderHold);
                 //alert(approvedDay);
                 //see.innerHTML = approvedDay;
