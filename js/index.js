@@ -1,3 +1,4 @@
+"use strict";
 function findName(){
     //outputs
     var see = document.getElementById("output");
@@ -17,25 +18,30 @@ function findName(){
     // error handler
     function error(){
         see.innerHTML = "invalid input values";
+        return;
     }
     function errorDate(){
         alert("check date and resubmit to receive your name.");
+        return;
     }
     function nameFinder(arrayName){
         if(arrayName.length != 4){
             error();
+            return;
         }
         else if(arrayName[3] == 'male'){
             var Day = new Date(arrayName[0],(arrayName[1]-1),arrayName[2]);
             var index = Day.getDay();
             var nameAka = male[index];
             see.innerHTML = "Welcome\t"+nameAka;
+            return;
         }
         else if(arrayName[3] == 'female'){
             var Day = new Date(arrayName[0],(arrayName[1]-1),arrayName[2]);
             var index = Day.getDay();
             var nameAka = female[index];
             see.innerHTML = "Welcome\t"+nameAka;
+            return;
         }
         else{
             errorDate();
