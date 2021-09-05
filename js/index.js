@@ -1,4 +1,3 @@
-"use strict";
 function findName() {
   //outputs
   var see = document.getElementById("output");
@@ -24,6 +23,7 @@ function findName() {
     alert("check date and resubmit to receive your name.");
     return;
   }
+  // function to find name
   function nameFinder(arrayName) {
     if (arrayName.length != 4) {
       error();
