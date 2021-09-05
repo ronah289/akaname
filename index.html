@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,31 +9,33 @@
     <script src="./js/index.js"></script>
     <title>akanames</title>
 </head>
-<body oncontextmenu="return false;" >
+
+<body oncontextmenu="return false;">
     <div id="all-content">
         <div id="pageTitle">
             <h1 id="topheader">Get Your Akan Name</h1>
             <p id="paragraph1">Providing you with your Ghanian name voluntarily.</p>
-        </div> 
+        </div>
         <div id="input">
             <div id="textfield">
-                <input type="number" name="text" id="dateOfBirth" placeholder="date of birth: 1 - 31" >
-                <input type="number" name="month" id="birthMonth" placeholder="month of birth: 1 - 12" >
-                <input type="number" name="year" id="birthYear" placeholder="year of birth" >
+                <input type="number" name="text" id="dateOfBirth" placeholder="date of birth: 1 - 31">
+                <input type="number" name="month" id="birthMonth" placeholder="month of birth: 1 - 12">
+                <input type="number" name="year" id="birthYear" placeholder="year of birth">
             </div>
-            <div id="select" >
+            <div id="select">
                 Gender:<br>
-                <input type="radio" id="male" name="gender" value="female" >Female<br>
-            <input type="radio" id="female" name="gender" value="male" checked> Male<br>
+                <input type="radio" id="male" name="gender" value="female">Female<br>
+                <input type="radio" id="female" name="gender" value="male" checked> Male<br>
             </div>
-            <button id="button1" onclick="findName();" >Get My Name!</button>
+            <button id="button1" onclick="findName();">Get My Name!</button>
             <p id="output"></p>
         </div>
-        <div id ="notes">
+        <div id="notes">
             <h3>Know Ghana</h3>
             <a href="https://en.wikipedia.org/wiki/Ghana">check here.</a>
             <img src="./images/Flag-Ghana.jpg" alt="">
         </div>
     </div>
 </body>
+
 </html>
