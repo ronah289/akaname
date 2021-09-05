@@ -18,7 +18,7 @@ function findName(){
     function error(){
         return;
     }
-    function errordate(){
+    function errorDate(){
         alert("check date and resubmit to receive your name.");
     }
     function nameFinder(arrayName){
@@ -29,16 +29,16 @@ function findName(){
             var Day = new Date(arrayName[0],(arrayName[1]-1),arrayName[2]);
             var index = Day.getDay();
             var nameAka = male[index];
-            see.innerHTML = nameAka;
+            see.innerHTML = "Welcome\t"+nameAka;
         }
         else if(arrayName[3] == 'female'){
             var Day = new Date(arrayName[0],(arrayName[1]-1),arrayName[2]);
             var index = Day.getDay();
             var nameAka = female[index];
-            see.innerHTML = nameAka;
+            see.innerHTML = "Welcome\t"+nameAka;
         }
         else{
-            error();
+            errorDate();
         }
     }
     if(isNaN(year)|| isNaN(month)||isNaN(date)){
