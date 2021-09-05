@@ -12,21 +12,26 @@
     <div id="all-content">
         <div id="pageTitle">
             <h1 id="topheader">Get Your Akan Name</h1>
-            <p id="paragraph1">Providing you with your Ghanian name.</p>
+            <p id="paragraph1">Providing you with your Ghanian name voluntarily.</p>
         </div> 
         <div id="input">
-            <input type="text" name="text" id="dateOfBirth" placeholder="date of birth: 1 - 31" >
-            <input type="text" name="month" id="birthMonth" placeholder="month of birth: 1 - 12" >
-            <input type="text" name="year" id="birthYear" placeholder="year of birth" >
-            <br>
-            Gender:<br>
-            <input type="radio" name="gender" value="female" >Female<br>
-            <input type="radio" name="gender" value="male" checked> Male<br>
-            <button id="button1" onclick="findName();" >Request!</button>
+            <div id="textfield">
+                <input type="text" name="text" id="dateOfBirth" placeholder="date of birth: 1 - 31" >
+                <input type="text" name="month" id="birthMonth" placeholder="month of birth: 1 - 12" >
+                <input type="text" name="year" id="birthYear" placeholder="year of birth" >
+            </div>
+            <div id="select" >
+                Gender:<br>
+                <input type="radio" id="male" name="gender" value="female" >Female<br>
+            <input type="radio" id="female" name="gender" value="male" checked> Male<br>
+            </div>
+            <button id="button1" onclick="findName();" >Get My Name!</button>
             <p id="output"></p>
         </div>
-        <div>
-            <h3>Read More About Ghana.</h3>
+        <div id ="notes">
+            <h3>Know Ghana</h3>
+            <a href="https://en.wikipedia.org/wiki/Ghana">check here.</a>
+            <img src="./images/Flag-Ghana.jpg" alt="">
         </div>
     </div>
 </body>
