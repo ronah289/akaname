@@ -16,7 +16,7 @@ function findName(){
     const female = ['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
     // error handler
     function error(){
-        return;
+        see.innerHTML = "invalid input values";
     }
     function errorDate(){
         alert("check date and resubmit to receive your name.");
@@ -65,7 +65,7 @@ function findName(){
 
         }
         else{
-            alert("try again");
+            alert("try again, check your entries.");
         }
     }
 }
