@@ -54,24 +54,17 @@ function findName(){
                 Dates[1] = 29;
                 date = (date >=1 && date <= Dates[month-1])?date:errorDate();
                 approvedDay = new Array(year,month,date,genderHold);
-                //alert(approvedDay);
-                //see.innerHTML = approvedDay;
-                //return approvedDay;
                 nameFinder(approvedDay);
             }
             else{
                 Dates = [...Dates];
                 date = (date >=1 && date <= Dates[month-1])?date:errorDate();
                 approvedDay = new Array(year,month,date,genderHold);
-                //alert(approvedDay);
-                //see.innerHTML = approvedDay;
-                //return approvedDay;
                 nameFinder(approvedDay);
             }
 
         }
         else{
-            //see.innerHTML = "try again";
             alert("try again");
         }
     }
