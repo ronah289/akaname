@@ -23,6 +23,7 @@
 
 * html5
 * css
+* JavaScript
 
 ## Live Site
 
