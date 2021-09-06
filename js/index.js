@@ -47,7 +47,7 @@ function findName() {
   if (isNaN(year) || isNaN(month) || isNaN(date)) {
     error();
   } else {
-    year = year.toString().length == 4 ? year : error();
+    year = (year.toString().length == 4)&&(year>=1900 && year <=2021) ? year : error();
     month = month >= 1 && month <= 12 ? month : error();
     if (year != error() && month != error()) {
       if (year % 4 == 0 || year % 400 == 0) {
